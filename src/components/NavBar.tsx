@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <Menu fixed="top" size="huge">
+      <Menu.Menu position="left">
+        <Menu.Item as={Link} to="/" style={{fontSize: "1.5rem"}}>
+          Home
+        </Menu.Item>
+        <Menu.Item as={Link} to="/rated" style={{fontSize: "1.5rem"}}>
+          Rated
+        </Menu.Item>
+      </Menu.Menu>
       <Menu.Menu position="right">
-        <Menu.Item as={Link} to="/auth">Auth</Menu.Item>
+        <Menu.Item as={Link} to="/auth" style={{fontSize: "1.5rem"}}>Auth</Menu.Item>
       </Menu.Menu>
     </Menu>
   );
