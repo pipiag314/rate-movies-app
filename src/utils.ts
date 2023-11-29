@@ -1,3 +1,5 @@
+
+// FOR more readable numbers: 1000000 -> 1,000,000
 export const prettyNumber = (num: number) => {
     let array = String(num).split("").reverse();
     let newArray = array.map((n, index) => {
