@@ -92,6 +92,7 @@ const ColumnDisplay = ({ dataType, data }: ColumnDisplayProps) => {
                       color: "olive",
                       icon: "star",
                       onClick: () => {
+                        setRating(0);
                         if(rating > 0) {
                           rateType(item.id);
                           notifyOnSuccess(item);
