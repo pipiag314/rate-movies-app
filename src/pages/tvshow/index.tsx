@@ -12,7 +12,6 @@ import {
 } from "semantic-ui-react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchTvShowDetails } from "./query";
-import { prettyNumber } from "../../utils";
 
 const TvShow = () => {
   const { id } = useParams();
