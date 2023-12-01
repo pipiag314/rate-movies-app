@@ -25,6 +25,7 @@ interface ColumnDisplayProps {
 }
 
 const ColumnDisplay = ({ dataType, data, isRated }: ColumnDisplayProps) => {
+  const isUserLoggedIn = localStorage.getItem("guest_session_id") !== null;
   const [rating, setRating] = useState(0);
 
   const notifyOnSuccess = (item: any) =>
@@ -99,6 +100,7 @@ const ColumnDisplay = ({ dataType, data, isRated }: ColumnDisplayProps) => {
                         color: "olive",
                         icon: "star",
                         onClick: () => {
+                          if(!isUserLoggedIn) return toast.error("Log In first to rate!")
                           if(rating > 0) {
                             rateType(item.id);
                             notifyOnSuccess(item);
