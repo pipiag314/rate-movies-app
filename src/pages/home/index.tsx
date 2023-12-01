@@ -40,9 +40,9 @@ const Home = () => {
       ) : (
         <div style={{ marginTop: 20 }}>
           {displayType === DisplayType.Movies ? (
-            <ColumnDisplay data={movieData.results} dataType={DisplayType.Movies} />
+            <ColumnDisplay isRated={false} data={movieData.results} dataType={DisplayType.Movies} />
           ) : (
-            <ColumnDisplay data={tvShowData.results} dataType={DisplayType.TvShows} />
+            <ColumnDisplay isRated={false} data={tvShowData.results} dataType={DisplayType.TvShows} />
           )}
         </div>
       )}

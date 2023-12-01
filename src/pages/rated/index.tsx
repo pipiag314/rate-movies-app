@@ -36,7 +36,7 @@ const Rated = () => {
                             {isLoadingRatedMovies ? (
                                 <div>Loading...</div>
                             ) : (
-                                <ColumnDisplay data={ratedMovies.results} dataType={DisplayType.Movies} />
+                                <ColumnDisplay isRated data={ratedMovies.results} dataType={DisplayType.Movies} />
                             )}
                         </div>
                     ) : (
@@ -45,7 +45,7 @@ const Rated = () => {
                             {isLoadingRatedTvShows ? (
                                 <div>Loading...</div>
                             ) : (
-                                <ColumnDisplay data={ratedTvShows.results} dataType={DisplayType.TvShows} />
+                                <ColumnDisplay isRated data={ratedTvShows.results} dataType={DisplayType.TvShows} />
                             )}
                         </div>
                     )}
