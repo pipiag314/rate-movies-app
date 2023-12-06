@@ -18,8 +18,6 @@ const Rated = () => {
         queryKey: ["rateTvShows"],
         queryFn: fetchRatedTvShows,
       });
-
-      console.log(ratedMovies)
     
     return (
         <div style={{marginTop: 50}}>
